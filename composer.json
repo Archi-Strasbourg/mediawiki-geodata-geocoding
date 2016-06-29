@@ -1,0 +1,18 @@
+{
+	"name": "archi-strasbourg/geo-data-geo-coding",
+	"description": "Add Nominatim geocoding to GeoData extension",
+	"license": "GPL-3.0",
+	"authors": [{
+		"name": "Pierre Rudloff",
+		"email": "contact@rudloff.pro"
+	}],
+	"type": "mediawiki-extension",
+    "require": {
+        "opendi/nominatim": "~0.2.0",
+        "mediawiki/GeoData": "~1.26.0"
+    },
+    "repositories": [{
+		"type": "composer",
+		"url": "https://mwpackagist.netlib.re/"
+	}]
+}
