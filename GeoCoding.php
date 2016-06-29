@@ -8,7 +8,6 @@ class GeoCoding
 
     public static function geocode($parser, $address, $city, $country)
     {
-        require_once __DIR__.'/vendor/autoload.php';
         global $wgTitle;
         $nominatim = Nominatim::newInstance('https://nominatim.openstreetmap.org/');
         $search = $nominatim->newSearch();
