@@ -13,7 +13,7 @@ class GeoCoding
         $search = $nominatim->newSearch();
         $search->street($address)->city($city)->country($country);
         $results = $nominatim->find($search);
-        return $parser->internalParse('{{#coordinates:primary|'.$results[0]['lat'].'|'.$results[0]['lon'].'}}');
+        return $parser->internalParse('{{#coordinates:'.$results[0]['lat'].'|'.$results[0]['lon'].'}}');
     }
 
     public static function onParserSetup(&$parser)
