@@ -11,7 +11,7 @@ class GeoCoding
         global $wgTitle;
         $nominatim = Nominatim::newInstance('https://nominatim.openstreetmap.org/');
         $search = $nominatim->newSearch();
-        $search->street($address)->city($city)->country($country);
+        $search->street(str_replace("l' ", "l'", $address))->city($city)->country($country);
         $results = $nominatim->find($search);
         return $parser->internalParse('{{#coordinates:'.$results[0]['lat'].'|'.$results[0]['lon'].'}}');
     }
